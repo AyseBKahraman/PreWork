@@ -1,0 +1,198 @@
+body{
+    color: white;
+}
+
+.add{
+    border: solid black;
+    height: 30px;
+    border-width: .2px;
+}
+.entrance{
+    text-align: center;
+    font-size: 7px;
+    color: black;
+    font-family: sans-serif;
+}
+.navContainer{
+    border: solid black;
+    height: 30px;
+    border-width: .2px;
+    display: flex;
+    justify-content: space-between;
+}
+.lefticons{
+    height: 25px;
+    margin-left: 3px;
+}
+.menuicon{
+    height: 20px;
+    margin-left: 3px;
+}
+.legoicon{
+    height: 20px;
+    margin-left: 3px;
+}
+.righticons{
+    height: 25px;
+    text-align: right;
+    align-items: flex-end;
+    padding: 5px;
+}
+.magnifyingicon{
+    height: 20px;
+    margin-left: 3px;
+}
+.freeusericon{
+    height: 20px;
+    margin-left: 3px;
+}
+.likeicon{
+    height: 20px;
+    margin-left: 3px;
+}
+.bagicon{
+    height: 20px;
+    margin-left: 3px;
+}
+.MainPicture{
+    /* height: 10px; */
+    /* width: 50px; */
+    position: relative;
+    color: white;
+    justify-content: space-around; 
+    text-align: left;
+    font-size: xx-small;
+    
+}
+.pic{
+    height: 220px;
+    width: 500px;
+    
+}
+.leftside{
+    position:absolute;
+    top: 50px;
+    left: 10px;
+}
+.firstlane{
+    justify-content: space-between;
+}
+.btn{
+    height: 30px;
+    margin-bottom: 12px;
+    font-size: x-small;
+}
+.btn:hover{
+    border: solid black;
+    height: 30px;
+    margin-bottom: 12px;
+    background-color: black;
+    color: white;
+}
+.legocontainer{
+    height: 50px;
+    width: 500px;
+    
+    flex-wrap: nowrap;
+    padding: 5px;
+    display: inline-flex;
+    justify-content: space-evenly;
+   
+   
+} 
+.new{
+    height: 40px;
+    margin-left: 3px;
+    
+}
+.exclusive{
+    height: 40px;
+    margin-left: 3px;
+    
+} 
+.offers{
+    height: 40px;
+    margin-left: 3px;
+}
+.legoideas{
+    height: 40px;
+    margin-left: 3px;
+}
+.legosupermario{
+    height: 40px;
+    margin-left: 3px;
+}
+.technic{
+    height: 40px;
+    margin-left: 3px;
+}
+.blank{
+    border: solid black;
+    height: 30px;
+    border-width: .2px;
+}
+.blankspot{
+    text-align: left;
+    font-size: 7px;
+    color: black;
+    font-family: sans-serif;
+}
+.dark{
+    border: solid black;
+    height: 50px;
+    background-color: black;
+    align-items: center;
+}
+.text{
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    font-family: sans-serif;
+    align-items: center;
+}
+.newlego{
+    color: black;
+    font-size: 14px;
+}
+.message{
+    text-align: center;
+    font-size: 10px;
+    color: black;
+    font-family: sans-serif;
+    align-items: center;
+}
+.filter{
+    border: solid black;
+    height: 30px;
+    border-width: .2px;
+}
+.filterdesign{
+    text-align: center;
+    font-size: 9px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 5px;
+}
+.LegoContainer{
+    display:flex;
+    flex-wrap:wrap;
+    padding:6px;
+    height:154vh;
+    margin:6px;
+}
+.LegoBox{
+    border:solid black;
+    margin:12px;
+    width:250px;
+    background-color: white;
+}
+.lego{
+    width:80%;
+    align-items: center;
+}
+.sign{
+    border: solid yellow;
+    color: yellow;
+    height: 15px;
+    width: 20px;
+}
