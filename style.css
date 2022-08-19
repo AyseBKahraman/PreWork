@@ -1,0 +1,152 @@
+body{
+    background-color: #f2f2f2 
+}
+.topbox{
+    border: solid #738c73;
+    height: 15px;
+    text-align: center;
+    color: white;
+    background-color: #738c73;
+    font-family: monospace;
+    font-size: xx-small;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo{
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.navigationbar{
+    /* border: solid black; */
+    width: 200px;
+    display: inline-flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 7px;
+    padding: 10px;
+}
+.mainpage{
+    justify-content: center;
+    border: solid black;
+    height: 450px;
+    margin: 5px;
+}
+.image1{
+    height: 100%;
+    width: 100%; 
+    
+}
+.block{
+    border: solid color black;
+    height: 100px;
+    background-color: white;
+    opacity: 0.5;
+    position: relative;
+    bottom: 150px;
+}
+.smalltitle{
+    position:absolute;
+    bottom: 50px; 
+    left: 10px;
+    font-size: 11px;
+    margin-left: 25px;    
+}
+.text{
+    position:absolute;
+    font-weight: less;
+    width: 310px;
+    bottom: 25px; 
+    font-size: 8px;
+    margin-left: 25px ;
+    padding-top: 10px;
+}
+.btn{
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    margin-left: 25px;  
+    width: 70px;
+    height: 20px;
+    font-size: 7px;
+}
+#meetthebike{
+    text-align: center;
+    color: black;
+    font-family: monospace;
+    font-size: 7px;
+    height: 10px;
+    width: 510px;
+    margin-top: 30px;
+    background-color: #f2f2f2 ;
+}
+
+.bikes{
+    /* border: solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:510px;
+    height: 425px;
+    margin-left: 5px;
+    background-color:  #f2f2f2;
+}
+.bike{
+    height: 70%;
+}
+.bikeblock{
+    /* border: solid black; */
+    height:140px ;
+    width:150px ;
+    background-color:  #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.underbike{
+    width: 100px;
+    height: 0px;
+    text-align: center;
+    color: black;
+    font-family: monospace;
+    font-size: 7px;
+    margin-bottom: 0px;
+}
+.price{
+    
+    width: 50px;
+    height: 0px;
+    text-align: center;
+    color: black;
+    font-family: monospace;
+    font-size: 7px;
+}
+.last{
+    /* border: solid black; */
+    width:510px;
+    height: 300px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.square{
+    /* border: solid black; */
+    height:230px ;
+    width:170px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+    font-size: 6px;
+
+    
+}
+.image2{
+    height: 70%;
+}
