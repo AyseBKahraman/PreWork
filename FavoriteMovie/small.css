@@ -1,0 +1,83 @@
+body{
+    background-color: #a2ab58;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+}
+.ParentContainer{
+    /* border: solid red; */
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+}
+.firsttext{
+    /* border: solid green; */
+    display: flex;
+    font-family: 'Comfortaa';
+    font-size: 12px;
+    margin: 5px;
+}
+.frame{
+    border: solid #b38d5e;
+    height: 100%;
+    width: 80%;
+    border-width: 10px;
+    border-radius: 20px;
+}
+.movie1{
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    
+
+}
+.movie2{
+    display: none;
+    height: 275px;
+    width: 400px;
+
+}
+.movie3{
+    display: none;
+    height: 275px;
+    width: 400px;
+}
+.button1{
+    display: flex;
+    justify-content: space-evenly;
+    color:  black;
+    
+}
+.tab{
+    font-size: 15px;
+    margin: 15px;
+    border: solid black ;
+    border-width: .8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 22px;
+}
+.pic1{
+    display: flex;
+    height: 90px;
+    width: 70px;
+}
+.pic2{
+    display: none;
+    height: 90px;
+    width: 70px;
+}
+.pic3{
+    display: none;
+    height: 90px;
+    width: 70px;
+}
