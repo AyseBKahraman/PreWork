@@ -9,12 +9,14 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Comfortaa', cursive;
+    margin-top: -10px;
 }
 .ParentContainer{
     /* border: solid red; */
     height: 100%;
     width: 100%;
     margin: 5px;
+    margin-top: -20px;
 }
 .thirdtext{
     /* border: solid green; */
@@ -22,6 +24,7 @@ body{
     font-family: 'Comfortaa';
     font-size: 12px;
     margin: 5px;
+    margin-top: 20px;
 }
 .frame{
     border: solid #b38d5e;
@@ -57,7 +60,10 @@ body{
 .button3{
     display: flex;
     justify-content: space-evenly;
+    height: 50px;
+    width: 150px;
     color:  black;
+    margin-top: 20px;
 }
 .tab{
     font-size: 15px;
@@ -83,4 +89,6 @@ body{
     height: 90px;
     width: 70px;
 }
-
+.hide{
+    display: none;
+}
