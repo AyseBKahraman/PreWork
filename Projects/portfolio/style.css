@@ -1,0 +1,57 @@
+body{
+    background-color: #bdb1c5;
+}
+.whiteblock{
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo{
+    height: 100%;
+    width: 70%;
+    border-radius: 50%;
+}
+.picture{
+    
+    height: 80%;
+    width: 30%;
+    border-radius: 20%;
+    padding: 10px;  
+}
+.info{
+    /* border: solid black; */
+    width: 70%;
+    font-family: monaco;
+    font-size: 15px;
+}
+.btnContainer{
+display: flex;
+justify-content: space-evenly;
+color:  #ad5389;
+}
+.tab{
+    font-size: 22px;
+    margin: 15px;
+    border: solid #e2d1c3 ;
+    border-width: .2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 22px;
+}
+.screen{
+    /* border: solid navy; */
+    border-width: 2px;
+    color:black;
+    padding: 2em;
+    font-size: 32px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resumepic{
+    height: 300%;
+    width: 50%;
+}
