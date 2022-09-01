@@ -1,0 +1,36 @@
+body{
+    background-color: aqua;
+}
+.game{
+    border: solid black;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.helloworld{
+    border: solid green;
+    height: 400px;
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.alien{
+    border: solid red;
+    height: 400px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.USSHelloWorld{
+    height: 40px;
+    width: 40px;
+}
+.alien1{
+    height: 40px;
+    width: 40px;
+}
