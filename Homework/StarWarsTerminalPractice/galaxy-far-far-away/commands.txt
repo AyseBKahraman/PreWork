@@ -1,0 +1,103 @@
+Setup
+desktop % cd PerScholas
+PerScholas % mkdir galaxy-far-far-away
+PerScholas % cd galaxy-far-far-away 
+galaxy-far-far-away % touch commands.txt
+
+Part I:Set the Scene
+1.
+galaxy-far-far-away % mkdir death_star 
+galaxy-far-far-away % cd death_star 
+death_star % touch darth_vader.txt princess_leia.txt storm_trooper.txt
+
+2.
+galaxy-far-far-away % mkdir tatooine
+galaxy-far-far-away % cd tatooine
+tatooine % touch luke.txt ben_kenobi.txt
+
+3.
+tatooine % mkdir millenium_falcon
+tatooine % cd millenium_falcon 
+millenium_falcon % touch han_solo.txt chewbaca.txt
+
+
+Part II: mv-rename
+4. 
+tatooine % mv ben_kenobi.txt obi_wan.txt
+
+Part II: cp-copy
+cp storm_trooper.txt ../tatooine
+
+Part IV: mv-move
+6.
+mv luke.txt obi_wan.txt millenium_falcon
+
+7.
+mv millenium_falcon ../galaxy-far-far-away
+
+8.
+mv millenium_falcon death_star
+
+9.
+mv princess_leia.txt millenium_falcon
+
+
+Part V: rm-remove
+10.
+death_star % cd millenium_falcon
+millenium_falcon % rm obi_wan.txt
+
+
+Part VI: all together 
+11.
+millenium_falcon % cd ../
+death_star % cd ../
+galaxy-far-far-away % mkdir yavin_4
+galaxy-far-far-away % 
+
+12.
+death_star % mv millenium_falcon ../yavin_4
+
+13.
+death_star % cd ../
+galaxy-far-far-away % cd yavin_4
+yavin_4 % mkdir x_wing
+
+14.
+millenium_falcon % mv princess_leia.txt ../ & mv luke.txt ../x_wing 
+
+15.
+yavin_4 % mv millenium_falcon  x_wing ../ 
+
+16.
+death_star % mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+
+17.
+death_star % mv darth_vader.txt tie_fighter_1
+
+18.
+cp storm_trooper.txt tie_fighter_2 & tie_fighter_3
+
+19.
+mv tie_fighter_1 tie_fighter_2 tie_fighter_3 ../
+
+
+Part VII: rm -r: remove directories and everything they contain
+20.
+rm -r  tie_fighter_2 tie_fighter_3
+
+
+Part VIII:
+21.
+galaxy-far-far-away % cd x_wing 
+x_wing % touch the_force.txt
+
+22. 
+x_wing % cd ../
+galaxy-far-far-away % rm -r death_star
+
+23.
+galaxy-far-far-away % mv millenium_falcon x_wing yavin_4  
+
+
+

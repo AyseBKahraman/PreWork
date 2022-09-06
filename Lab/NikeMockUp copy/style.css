@@ -1,0 +1,140 @@
+body{
+    height:450vh;
+  
+    color:white;
+}
+
+.navContainer{
+    border:solid black;
+    height:60px;
+    border-width:.2px;
+    display: flex;
+}
+.nikeicon{
+    height:60px;
+    margin-left:3px;
+}
+.smIcons{
+    /* border:solid purple; */
+    margin-left: 65%;
+    padding:5px;
+}
+.bcase{
+    height:40px;
+    margin-bottom:12px;
+    
+}
+.bcase:hover{
+    height:40px;
+    margin-bottom:12px;
+    /* border:solid black; */
+    border-width:.2px;
+    border-radius:50%;
+    background-color:lightgray;
+}
+
+.mglass{
+    height:25px;
+    margin-bottom:18px;   
+}
+
+.mglass{
+    height:25px;
+    margin-bottom:18px;   
+}
+
+.topScroll{
+    text-align:center;
+}
+.joiner{
+    text-align:center;
+}
+.mainPic{
+    width:100%;
+}
+.midTitle{
+    font-size:62px;
+}
+.oneLiner{
+    font-size: 22px;;
+}
+
+.btnBlack{
+    border:solid black;
+    color:white;
+    background-color:black;
+    margin:12px;
+    font-size:32px;
+    width:120px;
+    text-align:center;
+    border-radius:22px;
+}
+.btnBlack:hover{
+    border:solid black;
+    color:white;
+    background-color:green;
+    margin:12px;
+    font-size:32px;
+    width:120px;
+    text-align:center;
+    border-radius:22px;
+}
+.btnContainer{
+    display:flex;
+}
+.themeContainer{
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+}
+.themeTab:hover{
+    color:green;
+}
+.sneakerContainer{
+    /* border:solid red; */
+    display:flex;
+    flex-wrap:wrap;
+    padding:6px;
+    height:154vh;
+    margin:6px;
+}
+
+.sneakerBox{
+    border:solid black;
+    margin:12px;
+    width:250px;
+    background-color: grey;;
+}
+.sneakerBox:hover{
+    border:solid green;
+    margin:12px;
+    border-width:5px;
+    width:250px;
+    background-color: grey;;
+}
+.sneakerInfo{
+    border:solid lemonchiffon;
+    
+    font-size:23px;
+    height:100px;
+    text-align:center;
+    background-color:slategray;
+    color:lemonchiffon;
+}
+.shoe{
+    width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
