@@ -10,18 +10,21 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <img class="image" src="https://www.marmaladegamestudio.com/wp-content/uploads/2021/09/TABOO_Logo_RGB_tagline.png" alt="">
         <div class="maincontainer">
 
             <div class="top">
                 <span id="count">60</span> seconds
-                <button onclick="start()">PLAY</button>
+                <button id = "playbtn" onclick="start(); inputbox()">PLAY</button>
             </div>
 
             <div class="inputbar">
                 <div class="input">
                   <span class="input-group-text" id="inputGroup-sizing-sm">Your guess:</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input id = "check"  type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <button id = "btn"  onclick="validateWord()" type="button"></button>
+                <p id="demo"></p>
             </div>
 
 
@@ -29,11 +32,24 @@
                 <p id = "clue"></p>
             </div>
 
+            <button id = "nextbtn"  onclick="newRandom()" type="button">Pass</button>
 
+            <div class="score">
+                <div class="first">
+                    <p id= "player" class="player1">Player1<br> Score:</p>
+                    <span id="countplayer1">0</span>
+                </div>
+                <div class="second">
+                    <p id= "player" class="player2">Player2<br> Score:</p>
+                    <span id="countplayer2">0</span>
+                </div>
+            </div>
 
             
 
         </div>
+
+        
 
         
         <script src="app.js" ></script>
