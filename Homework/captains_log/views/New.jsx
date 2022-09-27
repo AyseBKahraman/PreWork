@@ -1,21 +1,24 @@
 const React = require("react");
-
+const DefaultLayout = require("./layouts/Default");
 class New extends React.Component {
-    render(){
-        return (
-            <div>
-                <form action="/logs" method="POST">
-                Title: <input type="text" name="title" />
-                <textarea  name="tarea" rows="4" cols="50">
-                    Typing..      
-                </textarea>
-                <br />
-                Ship Condition: <input type="checkbox" name="shipIsBroken" />
-                <br />
-                <input type="submit" name="" value="Create ship" />
-                </form>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <DefaultLayout title={"New Log Page"}>
+        <div>
+          <form action="/logs" method="POST">
+            Title: <input type="text" name="title" />
+            <br />
+            date <input type="text" name="date" />
+            <br />
+            entry <input type="text" name="entry" />
+            <br />
+            Eligible for ocean <input type="checkbox" name="isBroken" />
+            <br />
+            <input type="submit" name="" value="Create Log" />
+          </form>
+        </div>
+      </DefaultLayout>
+    );
+  }
 }
 module.exports = New;
