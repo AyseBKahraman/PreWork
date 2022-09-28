@@ -8,27 +8,41 @@ class Index extends React.Component{
         console.log(books);
             return(
                 <DefaultLayout title = {"Books Dashboard"}>
+                    
+                    <nav>
+                        <a href={'/books/new'}>Add New Book</a>
+                    </nav>
+
                     <ul>
                     {books.map((book, i) => {
                         return (
                         <li key = {i}>
-                           <img src= {book.imageUrl} alt="" />
+                           <img src= {book.imageUrl} alt="" className='bimg' />
                            <br></br>
-                            <a href = {`/books/${book.id}`}> {book.title}</a> has a GPA of {book.author}<br>
-                            </br> 
+                            <a href = {`/books/${book.id}`}> {book.title}</a> 
+                             <p>by {book.author} </p>
+                             <p>
+                             Paperback {book.price}
+                             </p>
 
-                            {book.isPassing ? "And is eligible to graduate" : "And is not eligible to graduate"}
+                            <br></br>
+                            <p>
+                            {book.isAvailable ? "Available Online" : "Not Available Online"}
+                            </p>
 
+                            <div class="btn">
                             {/* -----------EDIT */}
-                                <br></br>
-                             <a href = {`books/${book._id}/edit`}> Edit Book</a>
-
+                            <form action = {`/books/${book._id}/edit`} > 
+                                <input type = 'submit' value = 'Edit Book' ></input>
+                                
+                            </form>
                             {/* -----------DELETE */}
             
                             <form action = {`/books/${book._id}?_method=DELETE`} method = "POST"> 
-                                <input type = 'submit' value = 'DELETE'></input>
+                                <input type = 'submit' id='delete' value = 'Delete Book' ></input>
                                 
                             </form>
+                            </div>
                         </li>)
                     })}
                     </ul>

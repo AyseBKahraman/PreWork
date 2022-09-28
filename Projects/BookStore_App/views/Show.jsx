@@ -7,15 +7,15 @@ class Show extends React.Component {
       <DefaultLayout title={"Book Profile"}>
         <div>
             <nav>
-                <a href="/books"> Back2 Dashboard</a>
+                <a href="/books"> Back</a>
             </nav>
-          <h1> Show Page </h1>
+          <br></br>
+          {/* <h1> Show Page </h1> */}
           
-          {book.title}'s grade is  {book.author}
-          <br /> Book{" "}
-          {book.isPassing
-            ? "Is Eligible to Graduate"
-            : "Is NOT Eligible to Graduate"}
+          {book.title} by {book.author} {" "}
+          {book.isAvailable
+            ? "Is Available to sale"
+            : "Is NOT Available to sale"}
         </div>
       </DefaultLayout>
     );

@@ -4,30 +4,37 @@ const DefaultLayout = require("./layouts/Default");
 class Edit extends React.Component {
   render() {
     return (
-      <DefaultLayout title="Edit Page">
-         <form
+      <DefaultLayout title="Edit Book">
+         <form 
           action={`/books/${this.props.book._id}?_method=PUT`}
-          method="POST"
-        >
-          
+          method="POST">
+          <br></br>
+          <div className="editForm">
           Title:{" "}
           <input
             type="text"
             name="title"
+            size="40"
             defaultValue={this.props.book.title}
           />
-          <br />
+          <br></br>
+          <br></br>
           Author:{" "}
           <input type="text" name="author" defaultValue={this.props.book.author} />
           <br />
-          Is Eligible:
-          {this.props.book.isPassing ? (
-            <input type="checkbox" name="isPassing" defaultChecked />
-          ) : (
-            <input type="checkbox" name="isPassing" />
-          )}
           <br />
-          <input type="submit" value="Submit Changes" />
+          Price:{" "}<br></br>
+          <input type="text" name="price" defaultValue={this.props.book.price} />
+          <br></br><br />
+          Is Available:
+          {this.props.book.isAvailable ? (
+            <input type="checkbox" name="isAvailable" defaultChecked />
+          ) : (
+            <input type="checkbox" name="isAvailable" />
+          )}
+          <br /> <br />
+          <input type="submit" id="submitChange"value="Update Book" />
+          </div>
         </form>
       </DefaultLayout>
     );

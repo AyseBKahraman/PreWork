@@ -3,7 +3,8 @@ const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
   imageUrl: { type: String, required: true },
-  isPassing: Boolean,
+  price: {type: String, required: true},
+  isAvailable: Boolean,
   
 });
 // the Outline for ALL sooks we create/populate in dataset

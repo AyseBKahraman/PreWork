@@ -6,19 +6,29 @@ class New extends React.Component {
   render() {
     return (
       <DefaultLayout title={"New Book Page"}>
-        <div>
+        
           <form action="/books" method="POST">
-      
-            <br />
-            Title: <input type="text" name="title" />
-            <br />
-            author: <input type="text" name="author" />
-            <br />
-            Eligible for Graduation: <input type="checkbox" name="isPassing" />
-            <br />
-            <input type="submit" name="" value="Create Book" />
+            
+            
+            Image:{" "} <br></br>
+            <input type="text" name="imageUrl" />
+            <br /><br />
+            Title:{" "} <br></br>
+            <input type="text" name="title" />
+            <br /><br />
+            Author:{" "} <br></br>
+            <input type="text" name="author" />
+            <br /><br />
+            Price:{" "} <br></br>
+            <input type="text" name="price" />
+            <br /><br />
+            Is Available : <input type="checkbox" name="isAvailable" />
+            <br /><br /> 
+            
+            <input type="submit" id="createBook" name="" value="Create Book" />
+            
           </form>
-        </div>
+        
       </DefaultLayout>
     );
   }
