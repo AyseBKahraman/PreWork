@@ -9,22 +9,22 @@ class New extends React.Component {
         
           <form action="/books" method="POST">
             
-            
-            Image:{" "} <br></br>
+          <div className="editForm">
+            Image:{" "} 
             <input type="text" name="imageUrl" />
-            <br /><br />
-            Title:{" "} <br></br>
+            <br />
+            Title:{" "} 
             <input type="text" name="title" />
-            <br /><br />
-            Author:{" "} <br></br>
+            <br />
+            Author:{" "} 
             <input type="text" name="author" />
-            <br /><br />
-            Price:{" "} <br></br>
+            <br />
+            Price:{" "} 
             <input type="text" name="price" />
-            <br /><br />
+            <br />
             Is Available : <input type="checkbox" name="isAvailable" />
-            <br /><br /> 
-            
+            <br />
+            </div>
             <input type="submit" id="createBook" name="" value="Create Book" />
             
           </form>

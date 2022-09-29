@@ -31,7 +31,7 @@ class Indexebook extends React.Component{
                             {ebook.isAvailable ? "Available Online" : "Not Available Online"}
                             </p>
 
-                            <div class="btn">
+                            <div className="btn">
                             {/* -----------EDIT */}
                             <form action = {`/ebooks/${ebook._id}/edit`} > 
                                 <input type = 'submit' value = 'Edit EBook' ></input>

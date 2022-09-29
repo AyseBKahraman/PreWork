@@ -5,114 +5,151 @@ body {
   background: url(https://apexapps.oracle.com/pls/apex/r/dbpm/133/files/static/v394/test-background.png);
   margin: 0px;
   font-family: 'Comfortaa', cursive;
-  /* border: solid red; */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center; 
+  /* border: solid red; */
 }
-
 h1 {
   font-family: 'Righteous', cursive;
   background: rgb(192, 186, 179);
-  margin:0;
-  margin-bottom: .5em;
-  padding: 1em;
-  text-align: center;
+  display: flex; 
+  align-items: center; 
   width: 100%;
-  border: solid green;
+  height: 150px;
+  /* border: solid green; */
 }
-
+ #parent {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  /* border: solid fuchsia;  */
+}
+#left {
+  position: absolute;
+  display: flex; 
+  justify-content: left;
+  /* border: solid red; */
+}
+#center {
+  margin: auto;
+  display: flex;  
+  justify-content: center;
+  text-align: center; 
+  align-items: center;
+  /* border: solid green; */
+}
 a {
-  /* color: blue; */
+  color: blue;
   text-decoration: none;
-  /* text-shadow: 1px 1px 1px black; */
+  text-shadow: 0.5px 0.5px 0.5px black;
   font-size: 0.7em;
-  /* background: rgba(193, 235, 187, .9); */
+  display: flex;
+  justify-content: center;
   /* border: solid fuchsia; */
 }
 a:hover {
-  color: ghostwhite;
+  color: gray;
 }
 p {
-    font-size: 0.7em;
-    /* border: solid purple; */
+  font-size: 0.7em;
+  /* border: solid purple; */
 }
 ul {
-    display: inline-flex;
-    /* justify-content: center; */
-    align-content: flex-start;
-    flex-wrap: wrap;
-    /* border: solid black; */
-    
+  display: inline-flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  /* border: solid black; */
 }
-
 li {
   list-style: none;
-  /* border: solid green; */
   margin: 10px;
-  
 }
 .btn {
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    /* border: solid red; */
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  /* border: solid red; */
 }
-
 input[type=text] {
   padding: .3em;
   /* border: solid yellow; */
 }
-
 input[type=submit] {
-    padding: .3em;
-    color: mediumseagreen;
-    background:  orange;;
-    font-size: 0.7em;
-    border-radius: 10%;
-    width: 60px;
-    /* border: solid green; */
+  padding: .3em;
+  color: mediumseagreen;
+  background:  orange;;
+  font-size: 0.7em;
+  border-radius: 10%;
+  width: 60px;
+  /* border: solid green; */
 }
 input[id="delete"] {
-    padding: .3em;
-    color: orange;
-    background:  mediumseagreen;
-    font-size: 0.7em;
-    border-radius: 10%;
-    width: 70px;
-    /* border: solid green; */
+  padding: .3em;
+  color: orange;
+  background:  mediumseagreen;
+  font-size: 0.7em;
+  border-radius: 10%;
+  width: 70px;
+  /* border: solid green; */
 }
 input[id="submitChange"] {
-    padding: .3em;
-    color: black;
-    background:  gray;
-    font-size: 1em;
-    border-radius: 10%;
-    width: 110px;
-    margin-left: 45px;
+  padding: .3em;
+  color: black;
+  background:  gray;
+  font-size: 1em;
+  border-radius: 10%;
+  width: 110px;
+  margin-left: 45px;
 }
 input[id="createBook"] {
-    padding: .3em;
-    color: black;
-    background:  gray;
-    font-size: 1em;
-    border-radius: 10%;
-    width: 110px;
-    margin-left: 45px;
+  padding: .3em;
+  color: black;
+  background:  gray;
+  font-size: 1em;
+  border-radius: 10%;
+  width: 110px;
+  margin-left: 45px;
+}
+img {
+  width: 120px;
+  height: 150px;
+  opacity:1;
+}
+img:hover {
+  width: 120px;
+  height: 150px;
+  opacity: 0.3;
+}
+.logo{
+  width: 200px;
+}
+.logo:hover{
+  width: 200px;
+}
+.editForm {
+  width: 200px;
+  display: flex; 
+  flex-direction: column;
+}
+.navigation {
+  display: flex;
+  justify-content:center ;
+}
+.each {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  /* border: solid green; */
+  opacity: 1;
+}
+.each:hover {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  opacity: 0.3;
 }
 
-img {
-    width: 120px;
-    height: 150px;
-}
-.editForm{
-    /* border: solid darkblue; */
-    width: 200px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
-}
 
