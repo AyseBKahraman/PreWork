@@ -6,28 +6,28 @@ class Index extends React.Component{
     render(){
         return(
             <DefaultLayout title = {"Main Dasboard"} >
-                <div class="navigation">
+                <div className="navigation">
                     <nav className='each'>
                         <a href={'/books'}>
-                        <img id="icon" src="https://www.freeiconspng.com/thumbs/book-icon/open-book-icon-icon--open-book-2-svg-12.png" alt="" /> </a>
+                            <img id="icon" src="https://www.freeiconspng.com/thumbs/book-icon/open-book-icon-icon--open-book-2-svg-12.png" alt="" /> </a>
                         <a href={'/books'}>Book</a>
                     </nav>
 
                     <nav className='each'>
                         <a href={'/ebooks'}>
-                        <img src="https://www.freeiconspng.com/uploads/ipad-tablet-png-26.png" /> </a>
+                            <img src="https://www.freeiconspng.com/uploads/ipad-tablet-png-26.png" /> </a>
                         <a href={'/ebooks'}>EBook</a>
                     </nav>
 
                     <nav className='each'>
                         <a href={'/games'}>
-                        <img src="https://www.freeiconspng.com/uploads/game-controller-icon-png-10.png" /> </a>
+                            <img src="https://www.freeiconspng.com/uploads/game-controller-icon-png-10.png" /> </a>
                         <a href={'/games'}>Games</a>
                     </nav>
 
                     <nav className='each'>
                         <a href={'/gifts'}>
-                        <img src="https://www.freeiconspng.com/uploads/gift-box-icon-9.png"/> </a>
+                            <img src="https://www.freeiconspng.com/uploads/gift-box-icon-9.png"/> </a>
                         <a href={'/gifts'}>Gifts</a>
                     </nav>
 

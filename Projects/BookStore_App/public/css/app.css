@@ -45,9 +45,10 @@ a {
   color: blue;
   text-decoration: none;
   text-shadow: 0.5px 0.5px 0.5px black;
-  font-size: 0.7em;
+  font-size: 0.9em;
   display: flex;
   justify-content: center;
+  align-items: center;
   /* border: solid fuchsia; */
 }
 a:hover {
@@ -55,6 +56,8 @@ a:hover {
 }
 p {
   font-size: 0.7em;
+  display: flex;
+  flex-wrap: wrap;
   /* border: solid purple; */
 }
 ul {
@@ -66,6 +69,10 @@ ul {
 li {
   list-style: none;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: solid red; */
 }
 .btn {
   display: flex;
@@ -79,25 +86,41 @@ input[type=text] {
 }
 input[type=submit] {
   padding: .3em;
-  color: mediumseagreen;
-  background:  orange;;
+  color: black;
+  background:  green;
   font-size: 0.7em;
   border-radius: 10%;
   width: 60px;
   /* border: solid green; */
 }
-input[id="delete"] {
+input[type=submit]:hover {
+  color: white;
   padding: .3em;
-  color: orange;
-  background:  mediumseagreen;
   font-size: 0.7em;
   border-radius: 10%;
-  width: 70px;
+  /* border: solid green; */
+}
+input[id="delete"] {
+  padding: .3em;
+  color: black;
+  background:  red;
+  font-size: 0.7em;
+  border-radius: 10%;
+  width: 73px;
   /* border: solid green; */
 }
 input[id="submitChange"] {
   padding: .3em;
   color: black;
+  background:  gray;
+  font-size: 1em;
+  border-radius: 10%;
+  width: 110px;
+  margin-left: 45px;
+}
+input[id="submitChange"]:hover {
+  padding: .3em;
+  color: white;
   background:  gray;
   font-size: 1em;
   border-radius: 10%;
@@ -113,10 +136,19 @@ input[id="createBook"] {
   width: 110px;
   margin-left: 45px;
 }
+input[id="createBook"]:hover {
+  color: white;
+  padding: .3em;
+  font-size: 1em;
+  border-radius: 10%;
+  width: 110px;
+  margin-left: 45px;
+}
 img {
   width: 120px;
   height: 150px;
   opacity:1;
+  /* border: solid green; */
 }
 img:hover {
   width: 120px;
@@ -133,6 +165,7 @@ img:hover {
   width: 200px;
   display: flex; 
   flex-direction: column;
+  /* border: solid salmon; */
 }
 .navigation {
   display: flex;
@@ -150,6 +183,43 @@ img:hover {
   flex-direction: column;
   margin: 10px;
   opacity: 0.3;
+}
+#back {
+  /* border: solid green; */
+  width: 25px;
+  height: 25px;
+  
+}
+.backSection {
+  /* border: solid pink; */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
+  color: black;
+  
+}
+.big {
+  /* border: solid green; */
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+#indexBack {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  /* border: solid green; */
+}
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  /* border: solid salmon; */
+  width: 120px;
 }
 
 

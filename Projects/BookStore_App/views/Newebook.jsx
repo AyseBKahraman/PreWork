@@ -2,19 +2,17 @@
 
 const React = require("react");
 const DefaultLayout = require("./layouts/Default");
-class New extends React.Component {
+class Newebook extends React.Component {
   render() {
     return (
-      <DefaultLayout title={"New Book Page"}>
-
+      <DefaultLayout title={"New EBook Page"}>
         <div className="big">
           
-          <a href={'/books'} className="backSection">
+          <a href={'/ebooks'} className="backSection">
             <img id="back" src="http://cdn.onlinewebfonts.com/svg/img_71127.png" alt="" />Back
           </a>
-          
-
-          <form action="/books" method="POST">
+        
+          <form action="/ebooks" method="POST"> 
             <div className="editForm">
               Image:{" "} 
               <input type="text" name="imageUrl" />
@@ -28,18 +26,14 @@ class New extends React.Component {
               Price:{" "} 
               <input type="text" name="price" />
               <br />
-              Number of Copy:{" "} 
-              <input type="text" name="copy" />
-              <br />
               Is Available : <input type="checkbox" name="isAvailable" />
               <br />
-              <input type="submit" id="createBook" name="" value="Create Book" />
             </div>
+            <input type="submit" id="createBook" name="" value="Create EBook" />
           </form>
-        </div>
-        
+        </div> 
       </DefaultLayout>
     );
   }
 }
-module.exports = New;
+module.exports = Newebook;

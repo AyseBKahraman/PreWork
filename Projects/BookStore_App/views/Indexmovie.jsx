@@ -3,46 +3,45 @@ const { subtle } = require('crypto');
 const React = require('react');
 const DefaultLayout = require('./layouts/Default')
 
-class Indexebook extends React.Component{
+class Indexmovie extends React.Component{
     render(){
-        const {ebooks} = this.props;
-        console.log(ebooks);
+        const {movies} = this.props;
+        console.log(movies);
         return(
-            <DefaultLayout title = {"Ebooks Dashboard"}>
+            <DefaultLayout title = {"Movie Dashboard"}>
                 <nav id="indexBack">
                     <a href={'/'} className="backSection">
                         <img id="back" src="http://cdn.onlinewebfonts.com/svg/img_71127.png" alt="" />Back
                     </a>
-                    <a href={'/ebooks/newebook'}>Add New Ebook</a>
+                    <a href={'/movies/newmovie'}>Add New Movie</a>
                 </nav>
                 <ul>
-                    {ebooks.map((ebook, i) => {
+                    {movies.map((movie, i) => {
                         return (
                             <li key = {i}>
                                 <div className='start'>
                                     <span className='align'>
-                                        <img src= {ebook.imageUrl} alt="" className='bimg' />
+                                        <img src= {movie.imageUrl} alt="" className='bimg' />
                                         <br></br>
-                                        <a className='title' href = {`/ebooks/${ebook.id}`}> {ebook.title}</a> 
+                                        <a className='title' href = {`/movies/${movie.id}`}> {movie.title}</a> 
                                     </span>
-                                    <p>by {ebook.author} </p>
-                                    <p>Price {ebook.price}</p>
-                                    <p>Number of Copy: {ebook.copy}</p>
+                                    <p>by {movie.director} </p>
+                                    <p>Price {movie.price}</p>
                                 </div>
 
                                 <div className='end'>
-                                    <p>{ebook.isAvailable ? "Available Online" : "Not Available Online"}</p>
+                                    <p>{movie.isAvailable ? "Available Online" : "Not Available Online"} </p>
                                     <div className="btn">
                                         {/* -----------EDIT */}
-                                        <form action = {`/ebooks/${ebook._id}/editebook`} > 
-                                            <input type = 'submit' value = 'Edit EBook' ></input>
+                                        <form action = {`/movies/${movie._id}/editmovie`} > 
+                                            <input type = 'submit' value = 'Edit Movie' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-                                        <form action = {`/ebooks/${ebook._id}?_method=DELETE`} method = "POST"> 
-                                            <input type = 'submit' id='delete' value = 'Delete EBook' ></input>
+                                        <form action = {`/movies/${movie._id}?_method=DELETE`} method = "POST"> 
+                                            <input type = 'submit' id='delete' value = 'Delete Movie' ></input>
                                         </form>
                                     </div>
-                                </div>
+                                </div> 
                             </li>
                         )
                     })}
@@ -51,4 +50,4 @@ class Indexebook extends React.Component{
         )
     }
 }
-module.exports = Indexebook
+module.exports = Indexmovie

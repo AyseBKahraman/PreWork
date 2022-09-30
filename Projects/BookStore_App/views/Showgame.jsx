@@ -1,17 +1,17 @@
 const React = require("react");
 const DefaultLayout = require("./layouts/Default");
-class Show extends React.Component {
+class Showgame extends React.Component {
   render() {
-    const {book}= this.props;
+    const {game}= this.props;
       return (
-      <DefaultLayout title={"Book Profile"}>
+      <DefaultLayout title={"Game Profile"}>
         <div>
             <nav>
-                <a href="/books"> Back</a>
+                <a href="/games"> Back</a>
             </nav>
           <br></br>
-          {book.title} by {book.author} {" "}
-          {book.isAvailable
+          {game.name} by {game.producer} {" "}
+          {game.isAvailable
             ? "Is Available to sale"
             : "Is NOT Available to sale"}
         </div>
@@ -19,4 +19,4 @@ class Show extends React.Component {
     );
   }
 }
-module.exports = Show;
+module.exports = Showgame;

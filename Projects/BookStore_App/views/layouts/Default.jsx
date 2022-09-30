@@ -20,7 +20,7 @@ class DefaultLayout extends React.Component {
              
                  <div id="parent">
                   <a  href={'/'} id="left">
-                     <img  class="logo"src="https://cdn.freebiesupply.com/logos/large/2x/golden-books-logo-png-transparent.png" alt="" />
+                     <img  className="logo"src="https://cdn.freebiesupply.com/logos/large/2x/golden-books-logo-png-transparent.png" alt="" />
                   </a>
                   <span id="center">{this.props.title}</span>
                  </div>

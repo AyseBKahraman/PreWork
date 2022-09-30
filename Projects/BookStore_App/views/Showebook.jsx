@@ -1,17 +1,17 @@
 const React = require("react");
 const DefaultLayout = require("./layouts/Default");
-class Show extends React.Component {
+class Showebook extends React.Component {
   render() {
-    const {book}= this.props;
+    const {ebook}= this.props;
       return (
-      <DefaultLayout title={"Book Profile"}>
+      <DefaultLayout title={"EBook Profile"}>
         <div>
             <nav>
-                <a href="/books"> Back</a>
+                <a href="/ebooks"> Back</a>
             </nav>
           <br></br>
-          {book.title} by {book.author} {" "}
-          {book.isAvailable
+          {ebook.title} by {ebook.author} {" "}
+          {ebook.isAvailable
             ? "Is Available to sale"
             : "Is NOT Available to sale"}
         </div>
@@ -19,4 +19,4 @@ class Show extends React.Component {
     );
   }
 }
-module.exports = Show;
+module.exports = Showebook;

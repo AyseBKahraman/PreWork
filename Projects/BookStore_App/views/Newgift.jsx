@@ -2,44 +2,38 @@
 
 const React = require("react");
 const DefaultLayout = require("./layouts/Default");
-class New extends React.Component {
+class Newgift extends React.Component {
   render() {
     return (
-      <DefaultLayout title={"New Book Page"}>
-
+      <DefaultLayout title={"New Gift Page"}>
         <div className="big">
           
-          <a href={'/books'} className="backSection">
+          <a href={'/gifts'} className="backSection">
             <img id="back" src="http://cdn.onlinewebfonts.com/svg/img_71127.png" alt="" />Back
           </a>
-          
-
-          <form action="/books" method="POST">
+        
+          <form action="/gifts" method="POST"> 
             <div className="editForm">
               Image:{" "} 
               <input type="text" name="imageUrl" />
               <br />
-              Title:{" "} 
-              <input type="text" name="title" />
+              Name:{" "} 
+              <input type="text" name="name" />
               <br />
-              Author:{" "} 
-              <input type="text" name="author" />
+              Producer:{" "} 
+              <input type="text" name="producer" />
               <br />
               Price:{" "} 
               <input type="text" name="price" />
               <br />
-              Number of Copy:{" "} 
-              <input type="text" name="copy" />
-              <br />
               Is Available : <input type="checkbox" name="isAvailable" />
               <br />
-              <input type="submit" id="createBook" name="" value="Create Book" />
             </div>
+            <input type="submit" id="createBook" name="" value="Create Gift" />
           </form>
-        </div>
-        
+        </div> 
       </DefaultLayout>
     );
   }
 }
-module.exports = New;
+module.exports = Newgift;
