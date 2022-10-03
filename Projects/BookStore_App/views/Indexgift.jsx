@@ -37,7 +37,7 @@ class Indexgift extends React.Component{
                                             <input type = 'submit' value = 'Edit Gift' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-                                        <form action = {`/gifts/${gift._id}?_method=DELETE`} method = "POST"> 
+                                        <form action = {`/gifts/${gift._id}/deletegift`} > 
                                             <input type = 'submit' id='delete' value = 'Delete Gift' ></input>
                                         </form>
                                     </div>

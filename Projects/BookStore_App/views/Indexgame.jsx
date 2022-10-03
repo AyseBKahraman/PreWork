@@ -36,7 +36,7 @@ class Indexgame extends React.Component{
                                             <input type = 'submit' value = 'Edit Game' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-                                        <form action = {`/games/${game._id}?_method=DELETE`} method = "POST"> 
+                                        <form action = {`/games/${game._id}/deletegame`} > 
                                             <input type = 'submit' id='delete' value = 'Delete Game' ></input>
                                         </form>
                                     </div>

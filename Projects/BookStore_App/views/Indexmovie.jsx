@@ -37,7 +37,7 @@ class Indexmovie extends React.Component{
                                             <input type = 'submit' value = 'Edit Movie' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-                                        <form action = {`/movies/${movie._id}?_method=DELETE`} method = "POST"> 
+                                        <form action = {`/movies/${movie._id}/deletemovie`} > 
                                             <input type = 'submit' id='delete' value = 'Delete Movie' ></input>
                                         </form>
                                     </div>

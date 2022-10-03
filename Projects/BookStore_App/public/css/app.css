@@ -221,5 +221,11 @@ img:hover {
   /* border: solid salmon; */
   width: 120px;
 }
+#areyousure {
+  font-size: 18px;
+  width: 400px;
+  /* border: solid red; */
+}
+
 
 

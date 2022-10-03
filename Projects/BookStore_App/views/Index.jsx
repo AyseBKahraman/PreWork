@@ -38,8 +38,7 @@ class Index extends React.Component{
                                             <input type = 'submit' value = 'Edit Book' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-
-                                        <form action = {`/books/${book._id}?_method=DELETE`} method = "POST"> 
+                                        <form action = {`/books/${book._id}/delete`} > 
                                             <input type = 'submit' id='delete' value = 'Delete Book' ></input>
                                         </form>
                                     </div>

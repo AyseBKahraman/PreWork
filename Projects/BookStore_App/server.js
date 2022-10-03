@@ -303,14 +303,50 @@ app.put("/movies/:id", (req, res) => {
 
 //---------> DELETE [Delete]
 
+app.get("/books/:id/delete", (req, res) => {
+  Book.findById(req.params.id, (err, foundBook) => {
+    console.log(err)
+    if (!err) {
+      res.render("Delete", {
+        book: foundBook,
+      });
+    } else {
+      res.send({ msg: err.message });
+    }
+  });
+});
 app.delete("/books/:id", (req, res) => {
-    Book.findByIdAndRemove(req.params.id, (err, data) => {
-      res.redirect("/books");
-    });
+  Book.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/books");
+  });
+});
+app.get("/ebooks/:id/deleteebook", (req, res) => {
+  Ebook.findById(req.params.id, (err, foundEbook) => {
+    console.log(err)
+    if (!err) {
+      res.render("Deleteebook", {
+        ebook: foundEbook,
+      });
+    } else {
+      res.send({ msg: err.message });
+    }
+  });
 });
 app.delete("/ebooks/:id", (req, res) => {
   Ebook.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect("/ebooks");
+  });
+});
+app.get("/games/:id/deletegame", (req, res) => {
+  Game.findById(req.params.id, (err, foundGame) => {
+    console.log(err)
+    if (!err) {
+      res.render("Deletegame", {
+        game: foundGame,
+      });
+    } else {
+      res.send({ msg: err.message });
+    }
   });
 });
 app.delete("/games/:id", (req, res) => {
@@ -318,9 +354,33 @@ app.delete("/games/:id", (req, res) => {
     res.redirect("/games");
   });
 });
+app.get("/gifts/:id/deletegift", (req, res) => {
+  Gift.findById(req.params.id, (err, foundGift) => {
+    console.log(err)
+    if (!err) {
+      res.render("Deletegift", {
+        gift: foundGift,
+      });
+    } else {
+      res.send({ msg: err.message });
+    }
+  });
+});
 app.delete("/gifts/:id", (req, res) => {
   Gift.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect("/gifts");
+  });
+});
+app.get("/movies/:id/deletemovie", (req, res) => {
+  Movie.findById(req.params.id, (err, foundMovie) => {
+    console.log(err)
+    if (!err) {
+      res.render("Deletemovie", {
+        movie: foundMovie,
+      });
+    } else {
+      res.send({ msg: err.message });
+    }
   });
 });
 app.delete("/movies/:id", (req, res) => {

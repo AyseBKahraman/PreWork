@@ -38,7 +38,7 @@ class Indexebook extends React.Component{
                                             <input type = 'submit' value = 'Edit EBook' ></input>
                                         </form>
                                         {/* -----------DELETE */}
-                                        <form action = {`/ebooks/${ebook._id}?_method=DELETE`} method = "POST"> 
+                                        <form action = {`/ebooks/${ebook._id}/deleteebook`} > 
                                             <input type = 'submit' id='delete' value = 'Delete EBook' ></input>
                                         </form>
                                     </div>
