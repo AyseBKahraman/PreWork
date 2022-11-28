@@ -1,3 +1,3 @@
 Taboo Game
 
-![Taboo!](ScreenShot2022-11-28at2.55.14PM.jpg)
+![Taboo!](ScreenShot2022-11-28at4.37.36PM.png)
