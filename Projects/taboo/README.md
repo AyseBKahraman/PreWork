@@ -1,7 +1,7 @@
-
-__Taboo Game__
-
 =======
+__Taboo Game__
+---
+
 __Project Description__
 ---
 It is a browser interactive game which objective is to find correct words using clue words. Each player has 60 seconds in each turn. The player who knows the most words wins the game. 
@@ -23,8 +23,10 @@ It is a browser game that can be run any browser on any device that supports a b
 __Game Executing & Buttons__
 ---
 There are 2 buttons on the game:
+Unordered List :-
 *Play: this button starts the timer. Players have 60 seconds in each round. 
 *Pass: this button give chance to move the next word if player does not know current word. 
+
 __The End of The Game__
 ---
 Once each player plays the game for two rounds players are informed about who is the winner. 
