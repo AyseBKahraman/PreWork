@@ -1,6 +1,6 @@
-Taboo Game
+__Taboo Game__
 
-Project Description
+__Project Description__
 It is a browser interactive game which objective is to find correct words using clue words. Each player has 60 seconds in each turn. The player who knows the most words wins the game. 
 
 ![Taboo!](pic01.jpg)
