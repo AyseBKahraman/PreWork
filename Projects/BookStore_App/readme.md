@@ -5,9 +5,9 @@ __Book Store App__ =======
 
 
 <img 
-src= "main3.jpg" width= "350" height="360" />
+src= "images/main3.jpg" width= "350" height="360" />
 <img
-src= "book.jpg" width= "350" height="360" />
+src= "images/book.jpg" width= "350" height="360" />
 
 
 
@@ -40,9 +40,9 @@ Create, Read, Update and Delete are the four basic functions of persistent stora
 
 
 <img
-src= "edit.jpg" width= "300" height="350" />
+src= "images/edit.jpg" width= "300" height="350" />
 <img
-src= "new.jpg" width= "300" height="350" />
+src= "images/new.jpg" width= "300" height="350" />
 
 
 
