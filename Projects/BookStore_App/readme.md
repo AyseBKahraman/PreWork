@@ -4,9 +4,10 @@ __Book Store App__ =======
 <br>
 
 
-<img src= "main3.jpg" width= "350" height="360" />
+<img 
+src= "main3.jpg" width= "340" height="360" />
 <img
-src= "book.jpg" width= "350" height="360" />
+src= "book.jpg" width= "340" height="360" />
 
 
 
