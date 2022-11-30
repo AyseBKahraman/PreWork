@@ -3,8 +3,11 @@ __Book Store App__ =======
 ---
 <br>
 
-![book!](main.jpg)
-![book!](book.jpg)
+<img
+src= "main.jpg" width= "100" height="60" />
+<img
+src= "book.jpg" width= "100" height="90" />
+
 
 
 
@@ -34,8 +37,11 @@ __Project Description__
 Create, Read, Update and Delete are the four basic functions of persistent storage. These operations are usually referred to using the acronym CRUD. This application provides the user with the ability to ADD, DELETE, and UPDATE products. The application connected with MONGODB to fetch data. <br> </br></span>
 
 
-![book!](edit.jpg)
-![book!](new.jpg)
+
+<img
+src= "edit.jpg" width= "100" height="100" />
+<img
+src= "new.jpg" width= "100" height="100" />
 
 
 
