@@ -1,0 +1,191 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 * Project;\
+*Ayse Bali;\
+PROC IMPORT DATAFILE=  '/home/u45120067/my_courses/u44987912/ayse.xlsx' REPLACE\
+	DBMS=XLSX\
+	OUT=WORK.Google;\
+	GETNAMES=YES;\
+RUN;\
+ \
+PROC CONTENTS DATA=Google; RUN;\
+\
+Data Google; set Google;\
+If Category= '1.9' THEN DELETE;\
+if type = 'NaN' then delete;\
+RUN;\
+Proc FREQ data= Google;\
+TABLES Category;\
+Run; \
+\
+Proc FREQ data= Google;\
+TABLES Type;\
+Run; \
+ \
+*https://stats.idre.ucla.edu/sas/modules/using-sas-functions-for-making-and-recoding-variables/;\
+*https://communities.sas.com/t5/SAS-Programming/Extract-the-last-character-of-a-string-Extract-only-numeric/td-p/292328;\
+data google; set google;\
+size = compress(size);\
+number_part_mil = scan(size,1,'M');\
+number_part_k = scan(size,1,'k');\
+last = substr(reverse(trim(size)),1,1);\
+run;\
+\
+proc print data=google (obs=100); var size number_part_mil number_part_k last; run;\
+\
+data google; set google;\
+if last='M' then New_Size = number_part_mil*1000000;\
+else if last='k' then New_Size = number_part_k*1000;\
+run;\
+\
+proc print data=google (obs=100); var size New_Size; run;\
+\
+data google; set google;\
+InstallsNew = compress(Installs);\
+number_part = scan(Installs,1, '+');\
+last1 = substr(reverse(trim(Installs)),1,1);\
+New_Installs = input(number_part, comma13.);\
+New_Reviews = input(Reviews, 8.);\
+New_Price = input(Price, dollar7.);\
+New_Rating = input(Rating, 3.);\
+run;\
+\
+PROC CONTENTS DATA=Google; RUN;\
+\
+DATA Google; SET Google;\
+IF 0 < New_Rating =< 2 THEN CAT_RATING = '1-2';\
+ELSE IF 2 < New_Rating =< 3 THEN CAT_RATING = '2-3';\
+ELSE IF 3 < New_Rating =< 4 THEN CAT_RATING = '3-4';\
+ELSE IF 4 < New_Rating =< 5 THEN CAT_RATING = '4-5';\
+ELSE IF New_Rating = '.' THEN CAT_RATING = '0';\
+IF Category = 'FAMILY' THEN CategoryCombine = 'FAMILY';\
+ELSE IF Category = 'GAME' THEN CategoryCombine = 'GAME';\
+ELSE IF Category ='TOOLS' THEN CategoryCombine = 'TOOLS';\
+ELSE CategoryCombine = 'OTHER';\
+RUN;\
+\
+PROC FREQ DATA=Google;\
+TABLES CAT_RATING;\
+RUN;\
+\
+proc print data=google (obs=500); var Category New_Rating New_Reviews New_Size New_Installs Type New_Price Cat_Rating ; run;\
+\
+PROC means DATA=Google;\
+RUN;\
+\
+Proc univariate data=Google;\
+var New_Price New_Installs New_Reviews;\
+run;\
+\
+*Create Histogram;\
+Proc UNIVARIATE data = Google;\
+	VAR New_Rating ;\
+	HISTOGRAM New_Rating;\
+RUN;\
+Proc UNIVARIATE data = Google;\
+	VAR New_Price ;\
+	HISTOGRAM New_Price;\
+RUN;\
+\
+title "Generating a Bar Chart - Using Category";\
+proc sgplot data=google;\
+	vbar Category;\
+run;\
+	\
+*Create Histograms;\
+proc sgplot data=google;\
+  histogram New_Size;\
+run;\
+\
+proc sgplot data=google;\
+  histogram New_Installs;\
+run;\
+\
+proc sgpanel data=Google;\
+ panelby Type /\
+    uniscale=row;\
+ histogram New_Installs;\
+run;\
+\
+TITLE 'Summary of Installs Variable';\
+ PROC UNIVARIATE DATA = Google NOPRINT;\
+HISTOGRAM New_Installs / NORMAL; RUN;\
+\
+*  TWO SAMPLE T TEST;\
+*  is there an association between type(paid-free) and Installatio number? \
+*  are these differences in installation number statistically significant?;\
+proc ttest data=google;\
+class type;\
+var New_Installs ;\
+run;\
+\
+*SIMPLE LINEAR REGRESSION;\
+proc Reg data=Google;\
+	title "Linear regression(New_Reviews & Installation";\
+	model New_Installs = New_Reviews;\
+	run;\
+proc Reg data=Google;\
+	title "Linear regression(Size & Installation";\
+	model New_Installs = New_Size;\
+	run;\
+* ANOVA;\
+* is ther an association between the number of installs and rating category?;\
+proc ANOVA data=Google;\
+	class Cat_rating;\
+	model New_Installs = cat_rating;\
+	means Cat_rating; *st 2 kat\uc0\u305 ysa bunu kullanam\u305 yorsun;\
+run;\
+\
+proc ANOVA data=Google;\
+	class CategoryCombine;\
+	model New_Installs = CategoryCombine;\
+	means CategoryCombine; *st 2 kat\uc0\u305 ysa bunu kullanam\u305 yorsun;\
+run;\
+\
+\
+\
+\
+*MULTIVARIABLE LINEAR REGRESSION;\
+proc freq data=google; tables cat_rating; run;\
+\
+data google; set google;\
+CategoryCombine1= 0;\
+CategoryCombine2= 0;\
+CategoryCombine3= 0;\
+cat_rating1=0;\
+cat_rating2=0;\
+cat_rating3=0;\
+cat_rating4=0;\
+Type1=0;\
+if cat_rating='1-2' then cat_rating1=1;\
+if cat_rating='2-3' then cat_rating2=1;\
+if cat_rating='3-4' then cat_rating3=1;\
+if cat_rating='4-5' then cat_rating4=1;\
+if CategoryCombine='FAMILY' THEN CategoryCombine1=1;\
+if CategoryCombine='TOOLS' THEN CategoryCombine2=1;\
+if CategoryCombine='GAME' THEN CategoryCombine3=1;\
+if Type= 'Paid' then Type1=1;\
+run;\
+proc freq data=google; tables type cat_rating cat_rating1 cat_rating2 cat_rating3 cat_rating4; run;\
+proc reg data = google;\
+  model New_Installs = New_Reviews New_Size CategoryCombine1 CategoryCombine2 CategoryCombine3 type1 cat_rating1 cat_rating2 cat_rating3 cat_rating4 / stb;\
+run;\
+quit;\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
